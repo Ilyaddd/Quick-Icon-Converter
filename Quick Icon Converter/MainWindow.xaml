@@ -88,8 +88,6 @@
                     Click="Close"/>
             <Button Margin="0,0,40,0"
                     Style="{StaticResource Top}" Click="Minimized"/>
-            <Button Margin="0,0,80,0"
-                    Style="{StaticResource Top}" Click="Tray_Minimized"/>
         </Grid>
 
         <Grid x:Name="All"
@@ -98,8 +96,10 @@
                    Width="350"
                    Height="350"
                    VerticalAlignment="Top">
-                <Image Source="Resources/TransparentBack.png" />
-                <Image x:Name="Img"/>
+                <Image Source="Resources\TransparentBack.png"
+                       MouseLeftButtonDown="Img_MouseLeftButtonDown"/>
+                <Image x:Name="Img"
+                       MouseLeftButtonDown="Img_MouseLeftButtonDown"/>
             </Grid>
 
             <Grid x:Name="RadioButtons"
@@ -114,37 +114,37 @@
                       Width="150">
                     <Grid>
                         <Viewbox>
-                            <RadioButton GroupName="Size"/>
+                            <RadioButton x:Name="S1" GroupName="Size" Checked="S1_Checked"/>
                         </Viewbox>
                         <Label Content="16px"/>
                     </Grid>
                     <Grid>
                         <Viewbox>
-                            <RadioButton GroupName="Size"/>
+                            <RadioButton x:Name="S2" GroupName="Size" Checked="S2_Checked"/>
                         </Viewbox>
                         <Label Content="32px"/>
                     </Grid>
                     <Grid>
                         <Viewbox>
-                            <RadioButton GroupName="Size"/>
+                            <RadioButton x:Name="S3" GroupName="Size" Checked="S3_Checked"/>
                         </Viewbox>
                         <Label Content="48px"/>
                     </Grid>
                     <Grid>
                         <Viewbox>
-                            <RadioButton GroupName="Size"/>
+                            <RadioButton x:Name="S4" GroupName="Size" Checked="S4_Checked"/>
                         </Viewbox>
                         <Label Content="64px"/>
                     </Grid>
                     <Grid>
                         <Viewbox>
-                            <RadioButton GroupName="Size"/>
+                            <RadioButton x:Name="S5" GroupName="Size" Checked="S5_Checked"/>
                         </Viewbox>
                         <Label Content="128px"/>
                     </Grid>
                     <Grid>
                         <Viewbox>
-                            <RadioButton GroupName="Size"/>
+                            <RadioButton x:Name="S6" GroupName="Size" Checked="S6_Checked"/>
                         </Viewbox>
                         <Label Content="256px"/>
                     </Grid>
@@ -162,7 +162,10 @@
                                Margin="10,0,0,0"
                                Source="Resources/TransparentBack.png"/>
                         <Viewbox Height="30" Margin="50,0,0,0">
-                            <RadioButton GroupName="Back"/>
+                            <RadioButton x:Name="TBack"
+                                         GroupName="Back"
+                                         IsChecked="True"
+                                         Checked="TBack_Checked"/>
                         </Viewbox>
                     </Grid>
                     <Grid>
@@ -172,7 +175,8 @@
                                Margin="10,0,0,0"
                                Source="Resources/WhiteBack.png"/>
                         <Viewbox Height="30" Margin="50,0,0,0">
-                            <RadioButton GroupName="Back"/>
+                            <RadioButton  x:Name="WBack"
+                                          GroupName="Back" Checked="WBack_Checked"/>
                         </Viewbox>
                     </Grid>
                     <Grid>
@@ -182,7 +186,8 @@
                                Margin="10,0,0,0"
                                Source="Resources/BlackBack.png"/>
                         <Viewbox Height="30" Margin="50,0,0,0">
-                            <RadioButton GroupName="Back"/>
+                            <RadioButton x:Name="BBack"
+                                         GroupName="Back" Checked="BBack_Checked"/>
                         </Viewbox>
                     </Grid>
                 </UniformGrid>
@@ -191,7 +196,8 @@
             <Button Style="{StaticResource Bottom}"
                     Content="Convert"
                     HorizontalAlignment="Left"
-                    Margin="70,0,0,20">
+                    Margin="70,0,0,20"
+                    Click="Button_Click">
             </Button>
             <Button Style="{StaticResource Bottom}"
                     Content="Browse picture"
