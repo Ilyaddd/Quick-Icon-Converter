@@ -1,0 +1,210 @@
+﻿<Window x:Class="Quick_Icon_Converter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quick_Icon_Converter"
+        mc:Ignorable="d"
+        AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize"
+        MinHeight="710" MaxHeight="710" MinWidth="510" MaxWidth="510"
+        WindowStartupLocation="CenterScreen" Background="Transparent"
+        Title="MainWindow" Height="710" Width="510">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="Top">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Background" Value="#14191d"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Name="border" Background="{TemplateBinding Background}"/>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#E81123"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Button" x:Key="Bottom">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="#fff"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontSize" Value="20"/>
+            <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Name="border" Background="{TemplateBinding Background}"/>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#E81123"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>-->
+        </Style>
+
+        <Style TargetType="RadioButton">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="10,0,0,0"/>
+            <Setter Property="BorderBrush" Value="#34495e"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <Style TargetType="Viewbox">
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="45,0,0,0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="10" RenderingBias="Quality" ShadowDepth="0" Opacity="1"/>
+    </Window.Effect>
+    <Grid x:Name="MainGrid" 
+          Margin="10"
+          Background="#14191d"
+          MouseLeftButtonDown="DragWindow">
+        <Grid x:Name="TopPanel"
+              Height="30"
+              Background="#14191d"
+              VerticalAlignment="Top">
+
+            <Button Style="{StaticResource Top}"
+                    Click="Close"/>
+            <Button Margin="0,0,40,0"
+                    Style="{StaticResource Top}" Click="Minimized"/>
+            <Button Margin="0,0,80,0"
+                    Style="{StaticResource Top}" Click="Tray_Minimized"/>
+        </Grid>
+
+        <Grid x:Name="All"
+              Margin="0,30,0,0">
+            <Grid Margin="0,20,0,0"
+                   Width="350"
+                   Height="350"
+                   VerticalAlignment="Top">
+                <Image Source="Resources/TransparentBack.png" />
+                <Image x:Name="Img"/>
+            </Grid>
+
+            <Grid x:Name="RadioButtons"
+                  Width="350"
+                  Height="200"
+                  VerticalAlignment="Bottom"
+                  Margin="0,0,0,80">
+
+                <UniformGrid x:Name="SizePanel"
+                      HorizontalAlignment="Left"
+                      Columns="1"
+                      Width="150">
+                    <Grid>
+                        <Viewbox>
+                            <RadioButton GroupName="Size"/>
+                        </Viewbox>
+                        <Label Content="16px"/>
+                    </Grid>
+                    <Grid>
+                        <Viewbox>
+                            <RadioButton GroupName="Size"/>
+                        </Viewbox>
+                        <Label Content="32px"/>
+                    </Grid>
+                    <Grid>
+                        <Viewbox>
+                            <RadioButton GroupName="Size"/>
+                        </Viewbox>
+                        <Label Content="48px"/>
+                    </Grid>
+                    <Grid>
+                        <Viewbox>
+                            <RadioButton GroupName="Size"/>
+                        </Viewbox>
+                        <Label Content="64px"/>
+                    </Grid>
+                    <Grid>
+                        <Viewbox>
+                            <RadioButton GroupName="Size"/>
+                        </Viewbox>
+                        <Label Content="128px"/>
+                    </Grid>
+                    <Grid>
+                        <Viewbox>
+                            <RadioButton GroupName="Size"/>
+                        </Viewbox>
+                        <Label Content="256px"/>
+                    </Grid>
+                </UniformGrid>
+
+                <UniformGrid x:Name="BackPanel"
+                             HorizontalAlignment="Right"
+                             Columns="1"
+                             Width="150">
+                    <Grid>
+                        <Image Height="40"
+                               Width="40"
+                               Stretch="None"
+                               HorizontalAlignment="Left"
+                               Margin="10,0,0,0"
+                               Source="Resources/TransparentBack.png"/>
+                        <Viewbox Height="30" Margin="50,0,0,0">
+                            <RadioButton GroupName="Back"/>
+                        </Viewbox>
+                    </Grid>
+                    <Grid>
+                        <Image Height="40"
+                               Width="40"
+                               HorizontalAlignment="Left"
+                               Margin="10,0,0,0"
+                               Source="Resources/WhiteBack.png"/>
+                        <Viewbox Height="30" Margin="50,0,0,0">
+                            <RadioButton GroupName="Back"/>
+                        </Viewbox>
+                    </Grid>
+                    <Grid>
+                        <Image Height="40"
+                               Width="40"
+                               HorizontalAlignment="Left"
+                               Margin="10,0,0,0"
+                               Source="Resources/BlackBack.png"/>
+                        <Viewbox Height="30" Margin="50,0,0,0">
+                            <RadioButton GroupName="Back"/>
+                        </Viewbox>
+                    </Grid>
+                </UniformGrid>
+            </Grid>
+
+            <Button Style="{StaticResource Bottom}"
+                    Content="Convert"
+                    HorizontalAlignment="Left"
+                    Margin="70,0,0,20">
+            </Button>
+            <Button Style="{StaticResource Bottom}"
+                    Content="Browse picture"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,70,20" Click="Browse"/>
+        </Grid>
+
+
+
+
+
+
+    </Grid>
+</Window>
+
+<!--#626262 #E81123-->

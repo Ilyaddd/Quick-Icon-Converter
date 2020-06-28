@@ -1,0 +1,15 @@
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\MainWindow.g.cs
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\App.g.cs
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\Quick Icon Converter_MarkupCompile.cache
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\Quick Icon Converter_MarkupCompile.lref
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\bin\Release\Quick Icon Converter.exe.config
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\bin\Release\Quick Icon Converter.exe
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\bin\Release\Quick Icon Converter.pdb
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\Quick Icon Converter.csprojAssemblyReference.cache
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\MainWindow.baml
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\Quick Icon Converter.g.resources
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\Quick_Icon_Converter.Properties.Resources.resources
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\Quick Icon Converter.csproj.GenerateResource.cache
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\Quick Icon Converter.csproj.CoreCompileInputs.cache
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\Quick Icon Converter.exe
+D:\Документы\Develop\Серьёзные проекты\Quic Icon Convertert\Quick Icon Converter\Quick Icon Converter\obj\Release\Quick Icon Converter.pdb

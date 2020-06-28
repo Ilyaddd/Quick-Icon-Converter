@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quick Icon Converter", "Quick Icon Converter\Quick Icon Converter.csproj", "{5ABC854A-680D-486E-9BF2-D0563A91C0E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ABC854A-680D-486E-9BF2-D0563A91C0E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ABC854A-680D-486E-9BF2-D0563A91C0E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ABC854A-680D-486E-9BF2-D0563A91C0E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ABC854A-680D-486E-9BF2-D0563A91C0E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C6D303E-E4AE-48A0-9D06-B9446A2603C3}
+	EndGlobalSection
+EndGlobal
